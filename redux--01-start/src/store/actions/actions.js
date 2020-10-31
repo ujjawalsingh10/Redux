@@ -15,13 +15,27 @@ export const decrement  = () => {
         type: DECREMENT
     };
 };
-export const subtract  = () => {
+export const subtract  = (value) => {
     return {
-        type: SUBTRACT
+        type: SUBTRACT,
+        val: value
     };
 };
-export const add  = () => {
+export const add  = (value) => {
     return {
-        type: ADD
+        type: ADD,
+        val: value
+    };
+};
+export const storeResult  = (res) => {
+    return {
+        type: STORE_RESULT,
+        result: res
+    };
+};
+export const deleteResult  = (resElId) => {
+    return {
+        type: DELETE_RESULT,
+        resultElId: resElId
     };
 };
